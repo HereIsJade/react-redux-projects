@@ -1,7 +1,28 @@
-.video-list{
-
+.search-bar{
+	margin: 0 auto;
+}
+.search-bar input{
+	display: block;
+	width: 75%;
+	margin: 20px auto;
+	/*text-align: center;*/
+}
+.video-item img{
+	max-width: 64px;
+}
+.video-detail .details{
+	margin-top: 10px;
+	padding: 10px;
+	border: 1px solid #ddd;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
 }
 
-.media-left{
+.list-group-item{
+	cursor: pointer;
+}
 
+.list-group-item:hover{
+	background-color: #eee;
 }
