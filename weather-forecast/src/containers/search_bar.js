@@ -19,6 +19,7 @@ class SearchBar extends Component{
 	}
 
 	onInputChange(e){
+		// console.log(this)
 		this.setState({term: e.target.value})
 	}
 
@@ -30,6 +31,12 @@ class SearchBar extends Component{
 					className='form-control'
 					value = {this.state.term}
 					onChange = {this.onInputChange}
+					// without binding the context, this here would be undefined,
+					// since when calling onChange, context inside of that function points to undefined (strict mode)
+					// onChange = {function (e){
+					// 	// console.log(this)
+					// 	this.onInputChange(e)
+					// }}
 				/>
 				<span className='input-group-btn'>
 					<button className='btn btn-secondary' type='submit'>Submit</button>
